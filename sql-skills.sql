@@ -85,3 +85,46 @@ SELECT al.title, ar.name
 FROM album al
 JOIN artist ar
 ON al.artist_id = ar.artist_id;
+
+
+
+-- EXTRA CREDIT
+--ARTIST Table ========================================================================================================
+
+--1
+SELECT *
+FROM artist
+ORDER BY name desc
+LIMIT 10;
+
+--2
+SELECT *
+FROM artist
+WHERE name = 'Black%';
+
+--3
+SELECT *
+FROM artist
+WHERE name = '%Black%';
+
+
+--Employee Table ======================================================================================================
+
+--1
+SELECT MAX(birth_date)
+FROM employee;
+
+--2
+SELECT MIN(birth_date)
+FROM employee;
+
+
+--Invoice Table =========================================================================================================
+
+--1
+SELECT COUNT(*)
+FROM invoice
+WHERE billing_state IN ('CA', 'TX', 'AZ');
+
+--2
+
